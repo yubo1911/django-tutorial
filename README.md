@@ -18,3 +18,11 @@ To study and use django with python3.
  - mkdir templates in the manage.py dir. copy the default django templates(django/contrib/admin/templates/admin/base_site.html) to this templates dir.
  - add TEMPLATE_DIRS to mysite/settings.py
  - edit the template file(base_site.html) to customize the page.
+
+# PART III
+ - add urls.py in apps dir. edit mysite/urls.py to point the related urls to the app urls.py to dispatch.
+ - edit the view.py in apps dir. each function in view.py is related to a url. the parameters could be find in the regex in urls.py.
+ - app's template file should be located in app_dir/templates/app_name/template_name.html.
+ - use loader, RequestContext to render a HttpResponse.
+ - or use shortcuts render with request, template path and a dictionary to return a HttpResponse.
+ - use python code *url* to remove the hardcode urls in templates. namespace is needed if you have more than one apps.
