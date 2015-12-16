@@ -26,3 +26,8 @@ To study and use django with python3.
  - use loader, RequestContext to render a HttpResponse.
  - or use shortcuts render with request, template path and a dictionary to return a HttpResponse.
  - use python code *url* to remove the hardcode urls in templates. namespace is needed if you have more than one apps.
+
+# PART IV
+ - for the post request, the parameter will be stored in dict request.POST.
+ - for the post request, always use a HttpResponseRedirect to render a new page.
+ - use generic views, such as DetailView, ListView, can simplify your view code. You just need to config template_name, model or some other attrs.
