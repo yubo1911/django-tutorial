@@ -31,3 +31,12 @@ To study and use django with python3.
  - for the post request, the parameter will be stored in dict request.POST.
  - for the post request, always use a HttpResponseRedirect to render a new page.
  - use generic views, such as DetailView, ListView, can simplify your view code. You just need to config template_name, model or some other attrs.
+
+# PART V
+ - each test case class must drived from TestCase. 
+ - each test function's name must start with a 'test' string.
+ - there are several assert functions you can use when write test functions. such as assertEqual, assertContains, assertQuerysetEqual...
+ - the TestCase has an 'client' attr to simulate a client to test views.
+ - you can get a response from a view using self.client.get(reverse('polls:index')).
+ - for each test function, the TestCase would create a seperate new database for test. so don't worry about the previous test function would effect the current one.
+ 
